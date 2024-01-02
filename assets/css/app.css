@@ -1,6 +1,7 @@
 @import url('./../fonts/product-sans/style.css');
 *{
     font-family: 'Product Sans';
+    color: #3a3a3a;
 }
 .brand-logo{
     height: 70px;
@@ -9,13 +10,13 @@
     height: 70px;
 }
 .sidebar-nav{
-    margin: 0 10px 0 10px;
+    margin: 20px;
 }
 .sidebar-nav .sidebar-nav-header{
     text-transform: uppercase;
     font-size: 12pt;
     font-weight: 500;
-    padding: 5px 10px;
+    padding: 5px 10px; 
 }
 .sidebar-nav .sidebar-nav-items{
     text-transform: capitalize;
@@ -26,9 +27,55 @@
 }
 .sidebar-nav .sidebar-nav-items a{
     border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
-.sidebar-nav .sidebar-nav-items a.active{
+.sidebar-nav .sidebar-nav-items.active{
     background-color: #5D87FF;
+    border-radius: 5px;
+}
+.sidebar-nav .sidebar-nav-items.active *{
     color: #FFF;
+}
+
+.navbar .notification-icon{
+    padding: 10px;
+    line-height: 0;
+    border-radius: 50%;
+    
+}
+.navbar .notification-icon.notification-icon-hover{
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.navbar .notification-icon:hover{
+    background-color: #ECF2FF;
+    color: #5D87FF;
+}
+.navbar .notification-icon span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #5D87FF;
+    z-index: 999;
+    border-radius: 50%;
+    transform: translate(-35%, -65%);
+}
+.profile-icon{
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3px;
+}
+.profile-icon:hover{
+    background-color: #ECF2FF;
+}
+.profile-icon-hover{
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.profile-icon img{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
 }
