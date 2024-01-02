@@ -1,0 +1,34 @@
+@import url('./../fonts/product-sans/style.css');
+*{
+    font-family: 'Product Sans';
+}
+.brand-logo{
+    height: 70px;
+}
+.navbar{
+    height: 70px;
+}
+.sidebar-nav{
+    margin: 0 10px 0 10px;
+}
+.sidebar-nav .sidebar-nav-header{
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+.sidebar-nav .sidebar-nav-items{
+    text-transform: capitalize;
+    font-size: 12pt;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.sidebar-nav .sidebar-nav-items a{
+    border-radius: 5px;
+}
+
+.sidebar-nav .sidebar-nav-items a.active{
+    background-color: #5D87FF;
+    color: #FFF;
+}
