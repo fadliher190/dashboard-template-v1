@@ -10,6 +10,9 @@
 .navbar{
     height: 70px;
 }
+.sidebar{
+    min-width: 300px;
+}
 .sidebar-main{
     overflow-y: scroll;
     max-height: 100%;
@@ -33,6 +36,7 @@
 
 .sidebar-nav{
     padding: 20px;
+    max-width: 100%;
 }
 .sidebar-nav *{
     font-size: 9pt;
@@ -103,6 +107,7 @@
     border-radius: 50%;
     overflow: hidden;
     padding: 3px;
+    position: relative;
 }
 .profile-icon:hover{
     background-color: #ECF2FF;
@@ -111,12 +116,69 @@
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
 .profile-icon img{
     border-radius: 50%;
     width: 35px;
     height: 35px;
 }
 
+.sidebar-toggle-button{
+    display: none;
+}
+.profile-icon .profile-menu{
+    z-index: 999;
+    max-width: 200px;
+    transform: translate(-85%, 10px);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.profile-icon .profile-menu.active{
+    min-width: 200px;
+    min-height: 200px;
+}
+.profile-icon .profile-menu .card{
+    overflow: hidden;
+}
+.profile-icon .profile-menu .card .card-body li{
+    width: 100%;
+    display: flex;
+}
+
+.profile-icon .profile-menu .card .card-body ul li a{
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.profile-icon .profile-menu .card .card-body ul li a:hover{
+    background-color: #5D87FF;
+    color: #FFF;
+}
+
+
+
+
 .content-wrapper{
     max-width: 100%;
+}
+@media (max-width: 1200px) {
+    .sidebar{
+        position: fixed;
+        z-index: 999;
+        max-height: 100%;
+        width: 80%;
+        transform:  translate(-100%, 0%);
+    }
+    .sidebar-transition{
+        -webkit-transition: transform 0.1s ease-in-out;
+        transition: transform 0.1s ease-in-out;
+    }
+    .sidebar.active{
+        transform:  translate(0%, 0%);
+    }
+    
+    .sidebar-toggle-button{
+        display: block;
+    }
 }

@@ -14,8 +14,13 @@
 </head>
 <body>
     <div class="app flex flex-row h-screen">
-        <div class="sidebar w-1/5 bg-white border-r flex flex-col">
-            <div class="brand-logo"></div>
+        <div class="sidebar sidebar-transition w-1/5 bg-white border-r flex flex-col">
+            <div class="brand-logo flex flex-row items-center">
+                <img src="#" class="flex-auto" alt="">
+                <span class="relative sidebar-toggle-button" onclick="closeSidebar()">
+                    <iconify-icon width="20" height="20" icon="tabler:x"></iconify-icon>
+                </span>
+            </div>
             <div class="sidebar-main flex-auto">
                 <ul class="sidebar-nav">
                     <li class="sidebar-nav-header">
@@ -95,6 +100,9 @@
         </div>
         <div class="main-content flex-auto bg-white px-4 flex flex-col">
             <nav class="navbar bg-white flex items-center">
+                <span class="relative notification-icon notification-icon-hover sidebar-toggle-button" onclick="openSidebar()">
+                    <iconify-icon width="20" height="20" icon="tabler:menu-2"></iconify-icon>
+                </span>
                 <span class="relative notification-icon notification-icon-hover">
                     <iconify-icon width="20" height="20" icon="tabler:bell-ringing"></iconify-icon>
                     <span></span>
@@ -102,34 +110,59 @@
                 <span class="flex-auto"></span>
                 <!-- <span><a href="#" class="mr-4 bg-blue-300 px-2 py-1">Download</a></span> -->
                 <span class="relative profile-icon profile-icon-hover">
-                    <img src="./assets/image/profile.png" alt="">
+                    <img src="./assets/image/profile.png" class="profile-image" alt="#" tabindex="2" data-is_show="false" onclick="toggleProfileMenu(this)" onblur="blurProfileMenu(this)">
+                    <div class="profile-menu fixed">
+                        <div class="card border-gray-200 shadow-md">
+                            <div class="card-body p-0">
+                                <ul>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Change Password</a></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </span>
             </nav>
             <div class="content-wrapper">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card shadow-md border-none">
-                            <div class="card-body"></div>
+                    <div class="col-md-8 my-3">
+                        <div class="card shadow-md border-gray-200">
+                            <div class="card-body">
+                                <h5 class="card-title">Test</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia neque dolorum velit eum. Voluptatem error accusamus minus tempore veritatis adipisci voluptatum? Neque repellat dolorem dolor itaque mollitia? Et, fugiat aspernatur?</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-md border-none">
-                            <div class="card-body"></div>
+                    <div class="col-md-4 my-3">
+                        <div class="card shadow-md border-gray-200">
+                            <div class="card-body">
+                                <h5 class="card-title">Test</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia neque dolorum velit eum. Voluptatem error accusamus minus tempore veritatis adipisci voluptatum? Neque repellat dolorem dolor itaque mollitia? Et, fugiat aspernatur?</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-md border-none">
-                            <div class="card-body"></div>
+                    <div class="col-md-4 my-3">
+                        <div class="card shadow-md border-gray-200">
+                            <div class="card-body">
+                                <h5 class="card-title">Test</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia neque dolorum velit eum. Voluptatem error accusamus minus tempore veritatis adipisci voluptatum? Neque repellat dolorem dolor itaque mollitia? Et, fugiat aspernatur?</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-12 my-3">
-                        <div class="card shadow-md border-none">
-                            <div class="card-body"></div>
+                    <div class="col-md-8 my-3">
+                        <div class="card shadow-md border-gray-200">
+                            <div class="card-body">
+                                <h5 class="card-title">Test</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia neque dolorum velit eum. Voluptatem error accusamus minus tempore veritatis adipisci voluptatum? Neque repellat dolorem dolor itaque mollitia? Et, fugiat aspernatur?</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./assets/plugins/jquery/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
