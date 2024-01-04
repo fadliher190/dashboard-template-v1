@@ -5,25 +5,63 @@
 }
 .brand-logo{
     height: 70px;
+    flex: 1 1 auto;
 }
 .navbar{
     height: 70px;
 }
+.sidebar-main{
+    overflow-y: scroll;
+    max-height: 100%;
+}
+.sidebar-main::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+  
+.sidebar-main:hover::-webkit-scrollbar-thumb {
+    background-color: #d3d3d3; /* color of the thumb */
+    border-radius: 6px; /* roundness of the thumb */
+}
+
+.sidebar-main::-webkit-scrollbar-track {
+    opacity: 0; /* color of the track */
+}
+
+
+
 .sidebar-nav{
-    margin: 20px;
+    padding: 20px;
+}
+.sidebar-nav *{
+    font-size: 9pt;
 }
 .sidebar-nav .sidebar-nav-header{
     text-transform: uppercase;
-    font-size: 12pt;
-    font-weight: 500;
+    /* font-size: 12pt; */
+    font-weight: 700;
     padding: 5px 10px; 
+    margin-top: 30px;
 }
+.sidebar-nav .sidebar-nav-header:nth-child(1){
+    margin-top: 0px;
+}
+
 .sidebar-nav .sidebar-nav-items{
     text-transform: capitalize;
-    font-size: 12pt;
+    /* font-size: 12pt; */
     font-weight: 400;
     margin-bottom: 5px;
     margin-top: 5px;
+    border-radius: 5px;
+}
+.sidebar-nav .sidebar-nav-items:hover{
+    background-color: #ECF2FF;
+}
+.sidebar-nav .sidebar-nav-items:hover *{
+    
+    color: #5D87FF;
 }
 .sidebar-nav .sidebar-nav-items a{
     border-radius: 5px;
@@ -33,7 +71,6 @@
 
 .sidebar-nav .sidebar-nav-items.active{
     background-color: #5D87FF;
-    border-radius: 5px;
 }
 .sidebar-nav .sidebar-nav-items.active *{
     color: #FFF;
@@ -78,4 +115,8 @@
     border-radius: 50%;
     width: 35px;
     height: 35px;
+}
+
+.content-wrapper{
+    max-width: 100%;
 }

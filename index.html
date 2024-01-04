@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Template V1</title>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
@@ -31,7 +32,7 @@
                     </li>
                     <li class="sidebar-nav-items">
                         <a class="flex items-center py-2 px-3" href="#">
-                            <iconify-icon width="21" height="21" class="mr-4" icon="fa-regular:list-alt"></iconify-icon>
+                            <iconify-icon width="21" height="21" class="mr-4" icon="tabler:article"></iconify-icon>
                             buttons
                         </a>
                     </li>
@@ -92,7 +93,7 @@
                 </ul>
             </div>
         </div>
-        <div class="main-content flex-auto bg-white px-4">
+        <div class="main-content flex-auto bg-white px-4 flex flex-col">
             <nav class="navbar bg-white flex items-center">
                 <span class="relative notification-icon notification-icon-hover">
                     <iconify-icon width="20" height="20" icon="tabler:bell-ringing"></iconify-icon>
@@ -104,7 +105,29 @@
                     <img src="./assets/image/profile.png" alt="">
                 </span>
             </nav>
-            <div class="content-wrapper bg-white flex justify-center">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card shadow-md border-none">
+                            <div class="card-body"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-md border-none">
+                            <div class="card-body"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-md border-none">
+                            <div class="card-body"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 my-3">
+                        <div class="card shadow-md border-none">
+                            <div class="card-body"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
